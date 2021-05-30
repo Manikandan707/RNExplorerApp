@@ -8,7 +8,11 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "rc-start": "yarn start -- --reset-cache"
+    "rc-start": "yarn start -- --reset-cache",
+    "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean",
+    "clean-start": "yarn run clean && yarn run rc-start",
+    "fresh-install": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && yarn cache clean && yarn install",
+    "fresh-start" : "yarn run fresh-install && yarn run rc-start"
   },
   "dependencies": {
     "react": "17.0.1",
