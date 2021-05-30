@@ -54,7 +54,12 @@ const Section = ({children, title}): Node => {
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'light';
-  console.log("TEST COMMIT");
+  console.log("TEST COMMIT 1");
+
+  console.log("TEST COMMIT 2");
+
+  console.log("TEST COMMIT 3");
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
